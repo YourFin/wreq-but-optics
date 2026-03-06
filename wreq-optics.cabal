@@ -1,0 +1,51 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.38.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           wreq-optics
+version:        0.1.0.0
+author:         Joe
+maintainer:     joe@example.com
+license:        NONE
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Example
+  other-modules:
+      Paths_wreq_optics
+  autogen-modules:
+      Paths_wreq_optics
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+    , optics
+    , optics-th
+    , wreq
+  default-language: Haskell2010
+
+test-suite unit-tests
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      ExampleSpec
+      Paths_wreq_optics
+  autogen-modules:
+      Paths_wreq_optics
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wx-no-partial
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      base
+    , hspec
+    , hspec-contrib
+    , hspec-discover
+    , wreq-optics
+  default-language: Haskell2010

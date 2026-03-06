@@ -1,0 +1,31 @@
+name: wreq-optics
+version: 0.1.0.0
+license: NONE
+author: Joe
+maintainer: joe@example.com
+
+ghc-options: -Wall
+
+library:
+  source-dirs: src
+  dependencies:
+    - base
+    - wreq
+    - optics
+    - optics-th
+
+tests:
+  unit-tests:
+    main: Spec.hs
+    build-tools:
+     - hspec-discover:hspec-discover
+    dependencies:
+     - wreq-optics
+     - base
+     - hspec
+     - hspec-contrib
+     - hspec-discover
+    source-dirs: test
+    ghc-options:
+     # Handy to use partial functions in tests
+     - -Wx-no-partial
