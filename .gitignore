@@ -1,3 +1,5 @@
 /.cabal
 /.direnv
 /dist-newstyle
+/result
+/haddocks/
