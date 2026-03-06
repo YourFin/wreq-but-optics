@@ -11,8 +11,14 @@ library:
   dependencies:
     - base
     - wreq
-    - optics
-    - optics-th
+    - optics-core
+    - http-client
+    - http-types
+    - bytestring
+    - text
+    - time
+    - attoparsec
+    - mime-types
 
 tests:
   unit-tests:
@@ -25,7 +31,14 @@ tests:
      - hspec
      - hspec-contrib
      - hspec-discover
+     - wreq
+     - optics-core
+     - http-client
+     - http-types
+     - bytestring
+     - text
+     - time
+     - attoparsec
     source-dirs: test
     ghc-options:
-     # Handy to use partial functions in tests
      - -Wx-no-partial

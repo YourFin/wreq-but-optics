@@ -14,7 +14,7 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Example
+      Network.Wreq.Optics
   other-modules:
       Paths_wreq_optics
   autogen-modules:
@@ -23,9 +23,15 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      base
-    , optics
-    , optics-th
+      attoparsec
+    , base
+    , bytestring
+    , http-client
+    , http-types
+    , mime-types
+    , optics-core
+    , text
+    , time
     , wreq
   default-language: Haskell2010
 
@@ -33,7 +39,7 @@ test-suite unit-tests
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      ExampleSpec
+      Network.Wreq.OpticsSpec
       Paths_wreq_optics
   autogen-modules:
       Paths_wreq_optics
@@ -43,9 +49,17 @@ test-suite unit-tests
   build-tool-depends:
       hspec-discover:hspec-discover
   build-depends:
-      base
+      attoparsec
+    , base
+    , bytestring
     , hspec
     , hspec-contrib
     , hspec-discover
+    , http-client
+    , http-types
+    , optics-core
+    , text
+    , time
+    , wreq
     , wreq-optics
   default-language: Haskell2010
