@@ -1,0 +1,44 @@
+name: wreq-but-optics
+version: 0.1.0.0
+license: MIT
+author: Patrick Nuckolls
+maintainer: src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
+
+ghc-options: -Wall
+
+library:
+  source-dirs: src
+  dependencies:
+    - base
+    - wreq
+    - optics-core
+    - http-client
+    - http-types
+    - bytestring
+    - text
+    - time
+    - attoparsec
+    - mime-types
+
+tests:
+  unit-tests:
+    main: Spec.hs
+    build-tools:
+     - hspec-discover:hspec-discover
+    dependencies:
+     - wreq-but-optics
+     - base
+     - hspec
+     - hspec-contrib
+     - hspec-discover
+     - wreq
+     - optics-core
+     - http-client
+     - http-types
+     - bytestring
+     - text
+     - time
+     - attoparsec
+    source-dirs: test
+    ghc-options:
+     - -Wx-no-partial

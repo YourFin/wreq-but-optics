@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           wreq-but-optics
+version:        0.1.0.0
+author:         Patrick Nuckolls
+maintainer:     src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Network.Wreq.ButOptics
+      Network.Wreq.Optics
+  other-modules:
+      Paths_wreq_but_optics
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , http-client
+    , http-types
+    , mime-types
+    , optics-core
+    , text
+    , time
+    , wreq
+  default-language: Haskell2010
+
+test-suite unit-tests
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Network.Wreq.OpticsSpec
+      Paths_wreq_but_optics
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wx-no-partial
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , hspec
+    , hspec-contrib
+    , hspec-discover
+    , http-client
+    , http-types
+    , optics-core
+    , text
+    , time
+    , wreq
+    , wreq-but-optics
+  default-language: Haskell2010
