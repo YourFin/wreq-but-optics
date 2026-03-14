@@ -1,5 +1,5 @@
 name: wreq-but-optics
-version: 0.1.0.0
+version: 0.5.4.0
 license: MIT
 author: Patrick Nuckolls
 maintainer: src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
@@ -9,15 +9,15 @@ ghc-options: -Wall
 library:
   source-dirs: src
   dependencies:
-    - base
-    - wreq
-    - optics-core
-    - http-client
-    - http-types
-    - bytestring
+    - base >= 4.18 && < 5.0
+    - wreq >= 0.5.4 && < 0.6.0
+    - optics-core >= 0.4
+    - http-client >= 0.6
+    - http-types >= 0.8
+    - bytestring >= 0.9
     - text
-    - time
-    - attoparsec
+    - time >= 1.5
+    - attoparsec >= 0.11.1.0
     - mime-types
 
 tests:
