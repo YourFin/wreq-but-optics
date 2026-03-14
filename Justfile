@@ -13,6 +13,9 @@ build: hpack
 hpack:
   hpack
 
+regen-hoogle: hpack
+  cabal-hoogle generate
+
 setup:
   cabal user-config init --augment="nix: True"
   cabal update
