@@ -15,7 +15,7 @@ license-file: LICENSE
 author: Patrick Nuckolls
 maintainer: src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
 category: Web
-tested-with: GHC == { 9.2.8, 9.4.8, 9.6.7, 9.8.4, 9.10.3, 9.12.2 }
+tested-with: GHC == { 9.6.7, 9.8.4, 9.10.3, 9.12.2 }
 
 ghc-options: -Wall
 
