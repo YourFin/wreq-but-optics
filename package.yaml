@@ -1,8 +1,21 @@
+verbatim:
+  cabal-version: 3.0
 name: wreq-but-optics
 version: 0.5.4.0
+synopsis: Optics bindings for the wreq library
+description: >
+  Provides optics implementations of the lenses in wreq,
+  as well as a re-export of Network.Wreq (as Network.Wreq.ButOptics)
+  substituting lenses for optics.
+
+  In short: Wreq, but optics 😉
+github: YourFin/wreq-but-optics
 license: MIT
+license-file: LICENSE
 author: Patrick Nuckolls
 maintainer: src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
+category: Web
+tested-with: GHC == { 9.2.8, 9.4.8, 9.6.7, 9.8.4, 9.10.3, 9.12.2, 9.14.1 }
 
 ghc-options: -Wall
 

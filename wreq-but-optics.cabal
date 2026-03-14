@@ -1,4 +1,4 @@
-cabal-version: 1.12
+cabal-version: 3.0
 
 -- This file has been generated from package.yaml by hpack version 0.38.3.
 --
@@ -6,17 +6,31 @@ cabal-version: 1.12
 
 name:           wreq-but-optics
 version:        0.5.4.0
+synopsis:       Optics bindings for the wreq library
+description:    Provides optics implementations of the lenses in wreq, as well as a re-export of Network.Wreq (as Network.Wreq.ButOptics) substituting lenses for optics.
+                In short: Wreq, but optics 😉
+category:       Web
+homepage:       https://github.com/YourFin/wreq-but-optics#readme
+bug-reports:    https://github.com/YourFin/wreq-but-optics/issues
 author:         Patrick Nuckolls
 maintainer:     src@patrickn_REMOVE_FIRST_UNDERSCORE_AND_LATER.co
 license:        MIT
 license-file:   LICENSE
 build-type:     Simple
+tested-with:
+    GHC == { 9.14.1, 9.2.8, 9.4.8, 9.6.7, 9.8.4, 9.10.3, 9.12.2 }
+
+source-repository head
+  type: git
+  location: https://github.com/YourFin/wreq-but-optics
 
 library
   exposed-modules:
       Network.Wreq.ButOptics
       Network.Wreq.Optics
   other-modules:
+      Paths_wreq_but_optics
+  autogen-modules:
       Paths_wreq_but_optics
   hs-source-dirs:
       src
@@ -39,6 +53,8 @@ test-suite unit-tests
   main-is: Spec.hs
   other-modules:
       Network.Wreq.OpticsSpec
+      Paths_wreq_but_optics
+  autogen-modules:
       Paths_wreq_but_optics
   hs-source-dirs:
       test
