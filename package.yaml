@@ -30,6 +30,7 @@ library:
     - bytestring >= 0.9
     - text
     - time >= 1.5
+    - crypton >= 1.1.0
     - attoparsec >= 0.11.1.0
     - mime-types
 
